@@ -1,0 +1,74 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-08-05T21:22:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2024.4.0",
+  "resources": [
+    {
+      "_id": "wrk_kdn_netlify",
+      "name": "Netlify API Test",
+      "_type": "workspace"
+    },
+    {
+      "_id": "fld_users",
+      "parentId": "wrk_kdn_netlify",
+      "name": "Netlify Endpoints",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_users",
+      "parentId": "fld_users",
+      "name": "Get All Users",
+      "method": "GET",
+      "url": "https://kdn-flutter-backend.netlify.app/.netlify/functions/user",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    },
+    {
+      "_id": "req_add_user",
+      "parentId": "fld_users",
+      "name": "Add User (Tambah Ahli)",
+      "method": "POST",
+      "url": "https://kdn-flutter-backend.netlify.app/.netlify/functions/tambah-ahli",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nama\": \"Ahmad bin Mohamad\",\n  \"telefon\": \"+60123456789\",\n  \"email\": \"ahmad.mohamad@example.com\",\n  \"jawatan\": \"Jurutera Perisian\",\n  \"nombor_ic\": \"850123-14-5678\",\n  \"no_keahlian\": \"K-0012345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_auth_success",
+      "parentId": "fld_users",
+      "name": "Auth Success",
+      "method": "GET",
+      "url": "https://kdn-flutter-backend.netlify.app/.netlify/functions/auth",
+      "parameters": [
+        { "name": "username", "value": "userkdn" },
+        { "name": "password", "value": "pwd123" }
+      ],
+      "headers": [],
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_auth_failed",
+      "parentId": "fld_users",
+      "name": "Auth Failed",
+      "method": "GET",
+      "url": "https://kdn-flutter-backend.netlify.app/.netlify/functions/auth",
+      "parameters": [
+        { "name": "username", "value": "wrong" },
+        { "name": "password", "value": "wrong" }
+      ],
+      "headers": [],
+      "body": {},
+      "_type": "request"
+    }
+  ]
+}
