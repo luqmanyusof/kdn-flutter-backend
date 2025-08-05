@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luqmanyusof/kdn-flutter-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luqmanyusof/kdn-flutter-backend/issues"
+  },
+  "homepage": "https://github.com/luqmanyusof/kdn-flutter-backend#readme",
+  "description": "",
+  "dependencies": {
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.1.0"
+  }
+}
